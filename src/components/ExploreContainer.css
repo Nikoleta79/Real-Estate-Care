@@ -1,0 +1,240 @@
+
+/* Set up dashboard and footer layout */
+@charset "UTF-8";
+
+/* Root colors and variables - Keep these unchanged if using Bootstrap defaults */
+:root {
+    --bs-blue: #0d6efd;
+    --bs-gray-dark: #343a40;
+    --bs-dark: #212529;
+}
+
+/* General body and root adjustments for smooth behavior */
+*,:after,:before {
+    box-sizing: border-box;
+}
+@media (prefers-reduced-motion:no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Toolbar background color to match teal */
+.custom-toolbar {
+    background-color: #00AAA2 !important;
+    height: 30px;
+    min-height: 30px;
+}
+
+/* Dashboard toolbar styling */
+.dashboard-toolbar {
+    background-color: #343a40 !important;
+    padding: 10px;
+}
+
+/* Logo styling */
+.logo-style {
+    height: 80px;
+    margin-right: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    filter: invert(1);
+}
+
+/* Icon styling */
+.icon-style {
+    color: #d2d5d8;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Larger gear icon specifically */
+.large-gear-icon {
+    font-size: 32px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+    .dashboard-toolbar {
+        padding: 20px;
+    }
+    .logo-style {
+        height: 60px;
+    }
+    .icon-style {
+        font-size: 20px;
+        margin-left: 30px;
+    }
+    .large-gear-icon {
+        font-size: 28px;
+    }
+}
+
+/* Custom icon container for larger icons and spacing */
+
+.icon-container-large .icon-style {
+    font-size: 5rem;
+    color: #4b4b4b;
+}
+
+/* Dashboard wrapper with centered content */
+.dashboard-wrapper {
+    padding: 0 50px;
+    overflow: hidden; /* Prevents scrolling within the main area */
+}
+
+/* Row styling for icon spacing */
+.row {
+    gap: 20px;
+}
+
+/* Remove underline for main content and footer links */
+.no-underline, .no-underline-footer a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+/* KnowledgeBase fixed at the bottom */
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 10px 0;
+}
+
+/* Spacing for main content to avoid footer overlap */
+#dashboard {
+    padding-bottom: 80px;
+}
+
+/* KnowledgeBase icon and text styling */
+footer .fs-1 {
+    font-size: 1.5rem;
+}
+footer span {
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+/* Icon hover effect */
+.icon-style:hover {
+    color: #aeaaaa;
+    transform: scale(1.1);
+    transition: transform 0.2s, color 0.2s;
+}
+
+/* Remove underline on footer links and text */
+.no-underline-footer {
+    text-decoration: none !important;
+    color: inherit; /* Inherit color to match text color without changing */
+}
+
+.no-underline-footer span {
+    text-decoration: none !important; /* Ensures no underline on span text */
+    color: inherit;
+}
+
+/* Set grey color for icons and text, with hover effects */
+.footer-icon-grey {
+    color: grey; /* Initial color for icon and text */
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out; /* Smooth transition */
+}
+
+.footer-icon-grey:hover {
+    color: darkgrey; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.footer-text-grey {
+    color: grey; /* Initial text color */
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out; /* Smooth transition */
+}
+
+.footer-text-grey:hover {
+    color: darkgrey; /* Change text color on hover */
+}
+
+/* Default grey color for icons */
+.footer-icon-grey, .footer-text-grey {
+    color: grey;
+}
+
+/* Active icon and text styling */
+.active-icon {
+    color: white !important;
+}
+
+/* Default large icon container */
+.icon-container-large {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+
+
+/* Responsive adjustments for small screens */
+
+/* Flex layout for rows */
+/* Large screens: Original layout */
+.desktop-layout .icon-row {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 200px;}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.icon-style {
+    font-size: 4rem;
+    color: #4b4b4b;
+}
+
+@media (max-width: 576px) {
+    /* Small screens: Adjust layout */
+    .mobile-layout .icon-row {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* Smaller icon size on mobile for better balance */
+    .icon-container .icon-style {
+        font-size: 3rem;
+    }
+
+    /* Adjust spacing and text size */
+    .icon-container span {
+        font-size: 1rem; /* Smaller text */
+        margin-top: 10px; /* Consistent spacing */
+    }
+
+    .icon-container {
+        flex: 1;
+        margin: 10px 0; /* Smaller vertical margin */
+    }
+}
+
+/* Default icon size for body icons */
+.icon-container-large .icon-style {
+    font-size: 5rem; /* Default size for smaller screens */
+    color: #4b4b4b;
+}
+
+/* Increase body icon size for large screens */
+@media (min-width: 692px) { /* Adjust this breakpoint if necessary */
+    .icon-container-large .icon-style {
+        font-size: 6rem; /* Increase size for larger screens */
+    }
+}

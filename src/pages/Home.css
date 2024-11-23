@@ -1,0 +1,280 @@
+
+
+@charset "UTF-8";
+
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-gray-dark: #343a40;
+    --bs-dark: #212529;
+}
+
+
+*,:after,:before {
+    box-sizing: border-box;
+}
+@media (prefers-reduced-motion:no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
+
+.custom-toolbar {
+    background-color: #00AAA2 !important;
+    height: 30px;
+    min-height: 30px;
+}
+
+
+.dashboard-toolbar {
+    background-color: #343a40 !important;
+    padding: 10px;
+}
+
+
+.logo-style {
+    height: 80px;
+    margin-right: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    filter: invert(1);
+}
+
+
+.icon-style {
+    color: #d2d5d8;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.large-gear-icon {
+    font-size: 32px;
+}
+
+
+@media (max-width: 576px) {
+    .dashboard-toolbar {
+        padding: 20px;
+    }
+    .logo-style {
+        height: 60px;
+    }
+    .icon-style {
+        font-size: 20px;
+        margin-left: 30px;
+    }
+    .large-gear-icon {
+        font-size: 28px;
+    }
+}
+
+
+
+.icon-container-large .icon-style {
+    font-size: 5rem;
+    color: #4b4b4b;
+}
+
+
+.dashboard-wrapper {
+    padding: 0 50px;
+    overflow: hidden; 
+}
+
+
+.row {
+    gap: 20px;
+}
+
+
+.no-underline, .no-underline-footer a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 10px 0;
+}
+
+
+#dashboard {
+    padding-bottom: 80px;
+}
+
+
+footer .fs-1 {
+    font-size: 1.5rem;
+}
+footer span {
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+
+.icon-style:hover {
+    color: #aeaaaa;
+    transform: scale(1.1);
+    transition: transform 0.2s, color 0.2s;
+}
+
+
+.no-underline-footer {
+    text-decoration: none !important;
+    color: inherit; 
+}
+
+.no-underline-footer span {
+    text-decoration: none !important; 
+    color: inherit;
+}
+
+
+.footer-icon-grey {
+    color: grey; 
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out; 
+}
+
+.footer-icon-grey:hover {
+    color: darkgrey; 
+    transform: scale(1.1); 
+}
+
+.footer-text-grey {
+    color: grey; 
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out; 
+}
+
+.footer-text-grey:hover {
+    color: darkgrey; 
+}
+
+
+.footer-icon-grey, .footer-text-grey {
+    color: grey;
+}
+
+
+.active-icon {
+    color: white !important;
+}
+
+
+.icon-container-large {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+
+
+
+
+
+.desktop-layout .icon-row {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 200px;}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.icon-style {
+    font-size: 4rem;
+    color: #4b4b4b;
+}
+
+@media (max-width: 576px) {
+    
+    .mobile-layout .icon-row {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    
+    .icon-container .icon-style {
+        font-size: 3rem;
+    }
+
+   
+    .icon-container span {
+        font-size: 1rem; 
+        margin-top: 10px; 
+    }
+
+    .icon-container {
+        flex: 1;
+        margin: 10px 0; 
+    }
+}
+
+
+.icon-container-large .icon-style {
+    font-size: 5rem; 
+    color: #4b4b4b;
+}
+
+
+@media (min-width: 692px) { 
+    .icon-container-large .icon-style {
+        font-size: 6rem; 
+    }
+}
+
+.ion-content::-webkit-scrollbar {
+    display: none;
+}
+
+
+.ion-content {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+.card-content {
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1.25rem;
+}
+
+.card-content h5 {
+    font-size: 1.5rem;
+}
+
+.card-content .btn {
+    margin-top: 10px;
+    font-size: 1rem;
+    padding: 10px 10px;
+}
+
+@media (max-width: 576px) {
+    .card-content {
+        padding: 5px;
+        font-size: 1rem;
+    }
+
+    .card-content h5 {
+        font-size: 1rem;
+    }
+
+    .card-content .btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
